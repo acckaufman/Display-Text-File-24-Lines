@@ -1,0 +1,70 @@
+Chapter 10 Strings
+
+547	#include <cctype>
+	(Functions for testing characters)
+548	Character testing functions
+549	Use of cin.getline(arrayName, SIZE) to fill an array with user input
+	Use of test functions to determine if a customer number is correctly formatted
+551	toupper and tolower functions
+552	Input validation for goAgain (y/n)
+557	cin.getline function
+558	Loop for displaying a string that was input
+	#include <cstring>
+	strlen function (string length)
+	strlen(pointer_to_cstring) (does not include null terminator)
+559	strcat function (concatenate strings)
+	strcat(string1, string2)
+	(does not resize array for string1, must be sufficently large)
+	If string1 isn't large enough, overflow will result
+560	strcpy function
+	strcopy(string1, string2)
+	string 2 gets copied into string1 (no bounds checking)
+561	strncat and strncopy functions - versions with size limitations
+	Find out how many characters are left in string1
+	Pass that number to the function
+562	Manually insert a null terminator
+	strstr function
+	searches for a string inside of a string
+	strstr(stringToBeSearched, stringToLookFor)
+	returns the address of the occurrence of the second string within the first string
+	Otherwise, returns nullptr
+	//Could write a search option into a program (562-563)
+563	Use of break statement in for loop
+564	strcmp function
+	Returns 0 if equal, negative if string1 comes before string2, and vice versa
+565	Case sensitive
+	stricmp function - non-case-sensitive version in some compilers
+566	!strcmp(string1, string2): returns true when strings are the same, false if they're not
+
+567	Table 10-3, summary of string functions #include <cstring>
+
+569	C-string/Numeric Conversion Functions
+
+	Table 10-4, summary of conversion functions #include <cstdlib>
+
+570	to_string function #include <string>
+
+571	Table 10-5 Overloaded Versions of to_string Function
+
+573	Resolving the cin >> and cin.getline() issue (\n in keyboard buffer)
+	Use cin.getline() for all program input
+	Convert numeric strings to their numeric data type
+575	10.6 Design your own specialized functions for manipulating strings
+	Program 10-12: Copy a C-string
+576	Program 10-13: Cut the last name off a string (nameSlice function)
+578	Using pointers to pass c-string arguments
+	Benefit: you don't need to know the length of the string you're working with
+	countChars function
+
+581	10.7 More about the C++ string Class
+582	cin.getline(cin, name) in C++
+	You can use relational operators with the string class
+585	Table 10-6 Ways to define a string object
+586	String operators and concatenation
+587	String length in string class
+588	Program 10-22 You can use subscripts to display a string object one character at a time
+
+588-589	Table 10-8 String class member functions
+
+590	10.8 Case Study
+	Using .insert member function
